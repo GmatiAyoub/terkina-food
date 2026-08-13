@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-custom {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #D4AF37, #F59E0B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background: #D4AF37;
+    color: #1E293B;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  }
+  .btn-primary:hover {
+    background: #B8960E;
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2);
+  }
+  
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    background: #D4AF37;
+    color: #1E293B;
+    transform: scale(1.05);
+  }
+}
